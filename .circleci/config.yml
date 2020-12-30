@@ -22,3 +22,6 @@ jobs:
           name: Run Super Linter
           command: |
             docker run -e RUN_LOCAL=true -v $CIRCLE_WORKING_DIRECTORY superlinter-$CIRCLE_SHA1
+      - run:
+          name: Confirm
+          command: echo "SuperLinter has been executed via CircleCI"
