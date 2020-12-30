@@ -24,4 +24,4 @@ jobs:
             docker run -e RUN_LOCAL=true -v $CIRCLE_WORKING_DIRECTORY superlinter-$CIRCLE_SHA1
       - run:
           name: Confirm
-          command: echo "SuperLinter has been executed via CircleCI"
+          command: echo "SuperLinter has been executed via CircleCI with Docker Layer Caching"
