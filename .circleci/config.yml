@@ -8,7 +8,7 @@ jobs:
     machine:
       image: ubuntu-2004:202010-01
       # Docker layer caching seems to be enabled on GitHub Actions
-      # docker_layer_caching: true
+      docker_layer_caching: true
     steps:
       - checkout
       - run:
@@ -27,4 +27,4 @@ jobs:
             docker run -e RUN_LOCAL=true -v $CIRCLE_WORKING_DIRECTORY:/tmp/lint github/super-linter
       - run:
           name: Confirm
-          command: echo "SuperLinter has been executed via CircleCI without Docker Layer Caching"
+          command: echo "SuperLinter has been executed via CircleCI with Docker Layer Caching"
