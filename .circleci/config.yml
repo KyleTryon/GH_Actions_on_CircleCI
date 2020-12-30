@@ -2,7 +2,7 @@ version: 2.1
 workflows:
   main:
     jobs:
-      - build
+      - run-action
 jobs:
   run-action:
     machine:
