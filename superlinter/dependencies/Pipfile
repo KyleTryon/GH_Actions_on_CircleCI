@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+black = "*"
+cfn-lint = "*"
+cython = "*"
+flake8 = "*"
+pylint = "*"
+isort = "*"
+snakefmt = "*"
+snakemake = "*"
+yamllint = "*"
+typing_extensions = "*"
+yq = "*"
+ansible-lint = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
