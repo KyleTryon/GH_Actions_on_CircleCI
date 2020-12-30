@@ -14,8 +14,9 @@ jobs:
       - run:
           name: Building Super Linter
           command: |
-            mkdir "$CIRCLE_WORKING_DIRECTORY/.github/workflows/superlinter"
-            cd "$CIRCLE_WORKING_DIRECTORY/.github/workflows/superlinter"
+            cd "$CIRCLE_WORKING_DIRECTORY/.github/workflows/"
+            mkdir superlinter
+            cd superlinter
             git clone git@github.com:github/super-linter.git
             docker build . -t superlinter-$CIRCLE_SHA1
       - run:
