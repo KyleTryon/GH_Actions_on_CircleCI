@@ -23,7 +23,7 @@ jobs:
           name: Run Super Linter
           command: |
             CIRCLE_WORKING_DIRECTORY=$(eval "echo $CIRCLE_WORKING_DIRECTORY")
-            docker run -e RUN_LOCAL=true -v $CIRCLE_WORKING_DIRECTORY superlinter-$CIRCLE_SHA1
+            docker run -e RUN_LOCAL=true -v $CIRCLE_WORKING_DIRECTORY:/tmp/lint github/super-linter superlinter-$CIRCLE_SHA1
       - run:
           name: Confirm
           command: echo "SuperLinter has been executed via CircleCI with Docker Layer Caching"
