@@ -1,0 +1,6 @@
+# This is an example YAML file with linting errors left in on purpose for testing.
+key: "value"
+lists:
+  - list1
+  -list2
+  - list3
